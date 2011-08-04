@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html lang="en"> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		<title>VC Investments by Date</title> 
+		<meta name="author" content="Jerry Neumann"> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script src="d3.js"></script>
+		<script src="vcdata.js"></script>
+		<script src="barch.js"></script>
+		<link rel="stylesheet" type="text/css" href="vcbar.css" />
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+ 			_gaq.push(['_setAccount', 'UA-2675028-3']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head> 
+	<body>
+		<div id="header">
+			<a href="http://neuvc.com" id="neuvc"><b>neu</b></a>
+			<a id="make-link">Make Link</a>
+		</div>
+		<div id="makeLink">
+			<h1>Link to this chart:</h1>
+			<b id="mlClose" class="close">x</b>
+			<p>Copy this link:</p>
+			<textarea cols="80" rows="10" readonly="readonly" id="mlText" value=""></textarea>
+		</div>
+		<div id="barchart">
+		</div>
+		<div id="controls">
+			<div id="rounds">
+				Include:
+				<input type="checkbox" name="rnd" id="angel" value="angel" checked />Angel
+				<input type="checkbox" name="rnd" id="seed" value="seed" checked />Seed
+				<input type="checkbox" name="rnd" id="a" value="a" checked />A
+				<input type="checkbox" name="rnd" id="b" value="b" checked />B
+				<input type="checkbox" name="rnd" id="c" value="c" checked />C
+				<input type="checkbox" name="rnd" id="d" value="d" checked />D
+				<input type="checkbox" name="rnd" id="e" value="e" checked />E
+				<input type="checkbox" name="rnd" id="f" value="f" checked />F
+				<input type="checkbox" name="rnd" id="debt_round" value="debt_round" checked />Debt
+				<input type="checkbox" name="rnd" id="unattributed" value="unattributed" checked />Unattributed
+			</div>
+			<div id="vcs">
+			</div>
+			<div id="subsets">
+				Subsets:
+				<input type="button" value="All" id="all" />
+				<input type="button" value="None" id="none" />
+				<input type="button" value="Smart Money" id="smart-money" />
+				<input type="button" value="Super Angels" id="super-angels" />
+				<input type="button" value="Old School" id="old-school" />
+				<input type="button" value="NYC" id="nyc" />
+				<input type="button" value="Sand Hill Road" id="sand-hill-road" />
+			</div>
+		</div>
+		<div id="footer">
+			<hr />
+			Data courtesy of <a href="http://www.crunchbase.com">Crunchbase<a>, visualization tools courtesy of <a href="http://mbostock.github.com/d3/">d3.js</a>.
+		</div>
+	</body>
+</html>
